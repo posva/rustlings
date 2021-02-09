@@ -1,8 +1,18 @@
 // iterators4.rs
 
-// I AM NOT DONE
-
 pub fn factorial(num: u64) -> u64 {
+    if num < 2 {
+        1
+    } else {
+        // println!("{:?}", [2..num].iter());
+        // 4
+        (2..(num + 1)).fold(1, |total, n| total * n)
+    }
+    // if num > 0 {
+    //     num * factorial(num - 1)
+    // } else {
+    //     1
+    // }
     // Complete this function to return the factorial of num
     // Do not use:
     // - return
